@@ -6,12 +6,24 @@
     </head>
     <body>
         <header class="header">
-            <h1>Testing h1</h1>
-            <h2>Testing h2</h2>
-            <h3>Testing h3</h3>
-            <h4>Testing h4</h4>
-            <h5>Testing h5</h5>
-            <h6>Testing h6</h6>
+            <h2>Spire Development schedule planner</h2>
         </header>
+        <div id="map"></div>
+            <script>
+            / Initialize and add the map
+                function initMap() {
+                    // The location of Uluru
+                    var uluru = {lat: -25.344, lng: 131.036};
+                    // The map, centered at Uluru
+                    var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 4, center: uluru});
+                    // The marker, positioned at Uluru
+                    var marker = new google.maps.Marker({position: uluru, map: map});
+                }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjbtTAnXZrF9IJ5DCO72O4ZH1eT4AhC6Y&callback=initMap">
+            </script>
+          </body>
     </body>
 </html>
